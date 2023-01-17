@@ -1,0 +1,52 @@
+.container {
+    padding: 20px;
+    display: inline-block;
+}
+
+.user_info {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 2px 10px;
+}
+
+.user_info h1 {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+input {
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 3px;
+    padding-left: 10px;
+}
+
+.delete {
+    border: 1px solid rgb(255, 159, 159);
+    padding: 0 3px;
+    margin: 5px 0;
+}
+
+.edit {
+    border: 1px solid rgb(17, 72, 25);
+    padding: 0 3px;
+    margin: 5px 5px;
+}
+
+.history {
+    border: 1px solid rgb(28, 17, 72);
+    padding: 0 3px;
+    margin: 5px 5px;
+}
+.ext-btn {
+    padding: 3px 3px;
+}
+
+.modifications {
+    margin-left: 20px;
+    border: 1px solid black;
+    width: 40%;
+}
