@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import moment from 'moment';
+
 import UpdateField from './components/UpdateField';
 import HistoryField from './components/HistoryField';
 
 const baseURL = 'http://localhost:2000/users'
-
+const sliceDob = (date) => {
+  const dob = date.slice(0, 10);
+  return moment(dob).format("DD/MM/YYYY");
+}
 function App() {
   const [users, setUsers] = useState()
   const [patch, setPatch] = useState(false)
@@ -55,6 +60,8 @@ function App() {
     setIsHistory(true)
     setHistory(user)
   }
+  
+  
 
   return (
     <div className='container'>
@@ -66,7 +73,7 @@ function App() {
             <div>First name: {user.first_name}</div>
             <div>Last name: {user.last_name}</div>
             <div>Email: {user.email}</div>
-            <div>Date of birth: {user.dob}</div>
+            <div>Date of birth: {sliceDob(user.dob)}</div>
             <div>Height: {user.height}cm</div>
             <div>Weight: {user.weight}kg</div>
             <button onClick={() => deleteUser(user._id)} className='delete'>Delete</button>
@@ -100,6 +107,6 @@ function App() {
   );
 }
 
-
-
+export {sliceDob};
 export default App;
+ 
