@@ -84,7 +84,7 @@ function App() {
       }
 
       <div className='history-div'>
-        {isHistory ? <HistoryField user={history} /> : ''}
+        {isHistory ? <HistoryField user={history} slicedob={sliceDob}/> : ''}
       </div>
 
       <div>
