@@ -14,7 +14,7 @@ const HistoryField = (props) => {
             <div>Modifications:</div>
             {
                 props.user.notes.map((note) =>
-                    <div className='modifications'>
+                    <div className='modifications' key={note.modifications}>
                         <div>Number of mods: {note.modifications}</div>
                         <div>First name: {note.first_name}</div>
                         <div>Last name: {note.last_name}</div>
