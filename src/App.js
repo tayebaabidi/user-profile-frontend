@@ -7,10 +7,7 @@ import UpdateField from './components/UpdateField';
 import HistoryField from './components/HistoryField';
 
 const baseURL = 'http://localhost:2000/users'
-const sliceDob = (date) => {
-  const dob = date.slice(0, 10);
-  return moment(dob).format("DD/MM/YYYY");
-}
+
 function App() {
   const [users, setUsers] = useState()
   const [patch, setPatch] = useState(false)
@@ -61,7 +58,10 @@ function App() {
     setHistory(user)
   }
   
-  
+  const sliceDob = (date) => {
+  const dob = date.slice(0, 10);
+  return moment(dob).format("DD/MM/YYYY");
+}
 
   return (
     <div className='container'>
