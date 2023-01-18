@@ -7,7 +7,7 @@ const HistoryField = (props) => {
             <div>Last name: {props.user.last_name}</div>
             <div>Email: {props.user.email}</div>
             <div>Username: {props.user.username}</div>
-            <div>Date of birth: {props.user.dob}</div>
+          <div>Date of birth: {props.slicedob(props.user.dob)}</div>
             <div>Height: {props.user.height}cm</div>
             <div>Weight: {props.user.weight}kg</div>
             <div>Modifications:</div>
