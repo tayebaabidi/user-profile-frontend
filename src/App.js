@@ -27,7 +27,7 @@ function App() {
     window.location.reload(true);
   }
 
-  const handleAddUser = (e) => {
+  const handleAddUser = async (e) => {
     const first_name = e.target.first_name.value
     const last_name = e.target.last_name.value
     const username = e.target.username.value
@@ -35,8 +35,8 @@ function App() {
     const dob = e.target.dob.value
     const height = e.target.height.value
     const weight = e.target.weight.value
-
-    axios.post(baseURL, {
+    e.preventDefault()
+    await axios.post(baseURL, {
       first_name,
       last_name,
       username,
@@ -45,8 +45,8 @@ function App() {
       height,
       weight
     })
-    window.location.reload(true);
-    e.preventDefault()
+    setRefreshKey(refreshKey + 1);
+   
   }
   const handleUpdate = (user) => {
     setUpdateUser(user)
